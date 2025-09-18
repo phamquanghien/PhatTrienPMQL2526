@@ -29,4 +29,19 @@
 7. Gửi nhận dữ liệu giữa Controller và View
    - Để gửi dữ liệu từ Controller về View: ViewBag/ViewData/ViewTemplate
    - Để gửi dữ liệu từ view lên controller => submit form
-8. 
+8. Kết nối cơ sở dữ liệu
+   - Cài đặt các package cần thiết
+   - Cấu hình kết nối ở các file: appsettings.json, Program.cs
+   - Tạo file ApplicationDbContext
+   - Quản lý phiên bản cơ sở dữ liệu: sử dụng lệnh "dotnet ef migrations add MIGRATION_NAME" và "dotnet ef database update"
+9. Sử dụng SQL Server trên docker (nếu cần)
+   - Cài đặt docker desktop ở link: https://www.docker.com/get-started/
+   - Kiểm tra phiên bản docker cài đặt trên máy: docker --version
+   - Chạy lệnh để tải sql server image về: docker pull mcr.microsoft.com/mssql/server:2022-latest
+   - Tạo Sql Server container: docker run -d --name sql_server_container -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=YourStrong!Passw0rd' -p 1433:1433 mcr.microsoft.com/mssql/server:2022-latest
+10. Xây dựng chức năng CRUD
+   - Hiểu cách hiển thị dữ liệu lên trên view Index
+   - Hiểu cách thêm mới dữ liệu
+   - Hiểu cách chỉnh sửa thông tin một bản ghi có sẵn
+   - Hiểu cách xoá dữ liệu một bản ghi có sẵn
+11. 
